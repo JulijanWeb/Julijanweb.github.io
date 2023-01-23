@@ -99,7 +99,8 @@ li > a:hover::before {
 
 
 .content {
-  background-color: black;
+  background-color:black;
+
 }
 
 .content > .container {
@@ -233,8 +234,6 @@ p {
 }
 
 .grid-wrapper {
-  
-  
   padding: 50px;
   display: grid;
   grid-gap: 20px;
@@ -278,11 +277,104 @@ p {
   opacity: 0;
 }
 
-.radial-menu li {
-  color:black;
+.radial-menu {
+  
+  position: relative;
+  top:5%;
+  width: var(--radial-width);
+  height: var(--radial-height);
+  margin: 0 auto;  
+  animation: rotateWheel 5s linear infinite;
+
 }
 
+.radial-menu::before {
+  content: '';
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  top: 10%;
+  left: 10%;
+  
+}
 
+.radial-menu div {
+  position: absolute;
+  width: var(--radial-item-w);
+  height: var(--radial-item-h);;
+  font-size: 2.5rem;
+  text-align: center;
+  line-height: 100px;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+}
+
+.radial-menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(0deg);
+
+  
+}
+
+.radial-item-btn-1 {
+  top: 0px;
+  left: var(--radial-helper-center);
+  animation: rotateWheel1 5s linear infinite;
+}
+
+.radial-item-btn-2 {
+  top: var(--radial-helper-t-tp);
+  left: var(--radial-helper-w-rp);
+  animation: rotateWheel1 5s linear infinite;
+
+}
+
+.radial-item-btn-3 {
+  top: var(--radial-helper-t-bp);
+  left: var(--radial-helper-w-rp);
+  animation: rotateWheel1 5s linear infinite;
+
+}
+
+.radial-item-btn-4 {
+  top: var(--radial-height-diff);
+  left: var(--radial-helper-center);
+  animation: rotateWheel1 5s linear infinite;
+
+}
+
+.radial-item-btn-5 {
+  top: var(--radial-helper-t-bp);
+  left: var(--radial-helper-w-lp);
+  animation: rotateWheel1 5s linear infinite;
+
+}
+
+.radial-item-btn-6 {
+  top: var(--radial-helper-t-tp);
+  left: var(--radial-helper-w-lp);
+  animation: rotateWheel1 5s linear infinite;
+
+}
+
+.radial-menu div:hover {
+  transform: scale(1.1);
+  color: #fff;
+  cursor: pointer;
+}
+
+@keyframes rotateWheel {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+@keyframes rotateWheel1 {
+  from {transform: rotate(360deg);}
+  to {transform: rotate(0deg);}
+}
 
 footer {
   display:flex;
