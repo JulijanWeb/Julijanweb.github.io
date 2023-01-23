@@ -14,47 +14,37 @@
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   <style>
     :root {
-      --radial-width: 250px;
-      --radial-height: 250px;
+      --radial-width: 300px;
+      --radial-height: 300px;
       --radial-item-w: 100px;
       --radial-item-h: 100px;
-      /* Difference between radial menu width and item width */
-      --radial-helper-w-diff: calc(var(--radial-width) - var(--radial-item-w));  
+      --radial-helper-w-diff: calc(var(--radial-width) - var(--radial-item-w));
 
-/* Calculate correct left padding (width) for left buttons */
-      --radial-helper-w-lp: calc(var(--radial-width) - 95%);                            /*400 -95% */
-
-/* Calculate correct left padding (width) for right buttons */
+      --radial-helper-w-lp: calc(var(--radial-width) - 95%);
+      /*400 -95% */
       --radial-helper-w-rp: calc(var(--radial-width) - var(--radial-item-w) - 5%);
-
-/* Difference between radial menu height and item height */
       --radial-height-diff: calc(var(--radial-height) - var(--radial-item-h));
-
-/* Calculate center position */
       --radial-helper-center: calc(var(--radial-helper-w-diff) / 2);
-
-/* Calculate correct top padding (height) for buttons at top */
       --radial-helper-t-tp: calc(var(--radial-height-diff) / 4);
-
-/* Calculate correct top padding (height) for buttons at bottom */
       --radial-helper-t-bp: calc(var(--radial-helper-t-tp) * 3);
     }
   </style>
 </head>
 <body>
   <header>
- 
+
     <nav>
       <div class="mob-nav">
-      <ul class="main">
-        <li class="underline"><a href="">Naslovna</a></li>
-        <li><a href="#radovi">Radovi</a></li>
-        <li><a href="">Kontakt</a></li>
-        <div class="git_li">
-          <a href="https://www.linkedin.com/in/julijan-kova%C4%8Devi%C4%87-aa2b60249/"><i class="fa-brands fa-linkedin"></i></a>
-          <a href="https://github.com/JulijanWeb"><i class="fa-brands fa-github"></i></a>
-        </div>
-      </ul>
+        <ul class="main">
+          <li class="underline"><a href="">Naslovna</a></li>
+          <li><a href="#radovi">Radovi</a></li>
+          <li><a href="">Kontakt</a></li>
+          <div class="git_li">
+            <a href="https://www.linkedin.com/in/julijan-kova%C4%8Devi%C4%87-aa2b60249/"><i
+                class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/JulijanWeb"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </ul>
       </div>
     </nav>
     <div class="hamburger">
@@ -86,71 +76,60 @@
         Iskusan u rukovanju sa Adobe setom programa za dizajn (Photoshop, Illustrator)
       </p>
     </div>
-    <img src="img/PZW-ART.jpg">
+    <div class="bg-img">
+      <div class="radial-menu">
+        <div class="radial-menu-item radial-item-btn-1"><i class="fa-brands fa-html5" style="color:orange;"></i></div>
+        <div class="radial-menu-item radial-item-btn-2"><i class="fa fa-css3" aria-hidden="true"
+            style="color:#009FDA"></i></div>
+        <div class="radial-menu-item radial-item-btn-3"><i class="fa-brands fa-square-js" style="color:red;"></i></div>
+        <div class="radial-menu-item radial-item-btn-4"><i class="fa-brands fa-wordpress"
+            style="color:midnightblue"></i></div>
+        <div class="radial-menu-item radial-item-btn-5"><i class="fa-brands fa-python" style="color:yellow"></i></div>
+        <div class="radial-menu-item radial-item-btn-6"><i class="fa-brands fa-bootstrap" style="color:darkblue"></i>
+        </div>
+        </div>
     </div>
   </section>
   <section class="portfolio-row">
-  
-
-      <div class="grid-wrapper">
-        <h2 id="radovi" class="d-flex text-center align-items-center justify-content-center">Radovi</h2>
-        <a href="https://femisan-croatia.com/">
-          <div class="portfolio_item"><img src="img/portfolio/femisan.jpg" href="https://femisan-croatia.com/"></div>
-        </a>
-        <a href="https://maps.hellocroatia.eu/">
-          <div class="portfolio_item"><img src="img/portfolio/maps.jpg"></div>
-        </a>
-        <a href="https://www.d-organic.eu/">
-          <div class="portfolio_item"><img src="img/portfolio/orca.jpg"></div>
-        </a>
-        <a href="https://umijece-govora.hr/">
-          <div class="portfolio_item"><img src="img/portfolio/umijece.jpg"></div>
-        </a>
-        <a href="https://www.vila-marija.info/">
-          <div class="portfolio_item"><img src="img/portfolio/vila.jpg"></div>
-        </a>
-<!--
-        <ul class="radial-menu">
-          <li class="radial-menu-item radial-item-btn-1"><i class="fa-brands fa-html5" style="color:orange;"></i>HTML
-          </li>
-          <li class="radial-menu-item radial-item-btn-3"><i class="fa-brands fa-bootstrap"
-              style="color:darkblue"></i>Bootstrap</li>
-          <li class="radial-menu-item radial-item-btn-4"><i class="fa-brands fa-square-js"
-              style="color:red;"></i>JavaScript</li>
-          <li class="radial-menu-item radial-item-btn-5"><i class="fa-brands fa-wordpress"
-              style="color:midnightblue"></i>Wordpress</li>
-          <li class="radial-menu-item radial-item-btn-6"><i class="fa-brands fa-python" style="color:yellow"></i>Python
-            </li>
-          </ul>
-        -->
-</section>
-<section>
-
-
-  <div class="content">
-        <div class="radial-menu">
-          <div class="radial-menu-item radial-item-btn-1"><i class="fa-brands fa-html5" style="color:orange;"></i></div>
-          <div class="radial-menu-item radial-item-btn-2"><i class="fa fa-css3" aria-hidden="true" style="color:#009FDA"></i></div>
-          <div class="radial-menu-item radial-item-btn-3"><i class="fa-brands fa-square-js"
-            style="color:red;"></i></div>
-          <div class="radial-menu-item radial-item-btn-4"><i class="fa-brands fa-wordpress"
-            style="color:midnightblue"></i></div>
-          <div class="radial-menu-item radial-item-btn-5"><i class="fa-brands fa-python" style="color:yellow"></i></div>
-          <div class="radial-menu-item radial-item-btn-6"><i class="fa-brands fa-bootstrap"
-            style="color:darkblue"></i></div>
-      </div>   
-      <div class="zone">
-        <h2>Nešto o meni</h2>
-        <p>Iskusan u radu sa Microsoft Office paketom (PowerPoint, Excel, Word)<br>
-          Iskusan sa CMS sustavom za administraciju web sučelja (Wordpress)<br>
-          Osnovo poznavanje programskih jezika (Python / HTML / CSS / Javascript)<br>
-          Iskusan u rukovanju sa Adobe setom programa za dizajn (Photoshop, Illustrator)
-        </p>
-      </div>   
-</div>
-    </section>
-      
-  
+    <div class="grid-wrapper">
+      <h2 id="radovi" class="d-flex text-center align-items-center justify-content-center">Radovi</h2>
+      <a href="https://femisan-croatia.com/">
+        <div class="portfolio_item"><img src="img/portfolio/femisan.jpg" href="https://femisan-croatia.com/"></div>
+      </a>
+      <a href="https://maps.hellocroatia.eu/">
+        <div class="portfolio_item"><img src="img/portfolio/maps.jpg"></div>
+      </a>
+      <a href="https://www.d-organic.eu/">
+        <div class="portfolio_item"><img src="img/portfolio/orca.jpg"></div>
+      </a>
+      <a href="https://umijece-govora.hr/">
+        <div class="portfolio_item"><img src="img/portfolio/umijece.jpg"></div>
+      </a>
+      <a href="https://www.vila-marija.info/">
+        <div class="portfolio_item"><img src="img/portfolio/vila.jpg"></div>
+      </a>
+  </section>
+  <section>
+      <!--
+      <div class="zone forma">
+        <h2>Kontakt</h2>
+        <form>
+          <div class="form-group">
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="Unesite email">
+          </div>
+          <div class="form-group">
+            <br>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          </div>
+          <div class="form-group form-check">
+          </div>
+          <button type="submit" class="btn btn-primary">Pošalji</button>
+        </form>
+      </div>
+    </div>
+    -->
+  </section>
   <footer>
     <span><a href="#">orestwebdesign@gmail.com</a> | © 2023</span>
   </footer>
