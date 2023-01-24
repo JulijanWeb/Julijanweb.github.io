@@ -223,7 +223,9 @@ li > a:hover::before {
   .mob-nav {
     width:50%;
   }
-
+  .portfolio_item {
+    margin:0;
+  }
   }
 
 
