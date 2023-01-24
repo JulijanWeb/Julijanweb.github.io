@@ -223,6 +223,9 @@ li > a:hover::before {
   .mob-nav {
     width:50%;
   }
+  .portfolio_item {
+    grid-template-columns: repeat(3, 1fr);
+  }
   }
 
 
