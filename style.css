@@ -43,7 +43,14 @@ h2 {
 h1 {
   font-weight: 800;
 }
-
+h6 {
+  margin-top:2rem;
+  color:white;
+  text-align:center;
+}
+a:link, a:visited {
+  text-decoration: none;
+}
 .main {
   padding-bottom: 20px;
   list-style: none;
@@ -219,34 +226,6 @@ li > a:hover::before {
   color:white;
   z-index:99;
 }
-@media screen and (min-width: 320px) and (max-width: 480px) {
-  .mob-nav {
-    width:50%;
-  }
-  .portfolio_item {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  }
-
-
-@media only screen and (max-width: 768px) {
-
-  body::before {
-    background-position: center bottom;
-  }
-
-  h2 {
-    font-size:24px;
-  }
-  .content {
-    display: block;
-    grid-template-columns: 1fr;
-  }
-  .hamburger {
-    left:85%;
-  }
-}
-
 .zone > h2,
 p {
   padding: 30px;
@@ -447,4 +426,44 @@ footer > span > a {
 
 span > a:hover {
   color:orange;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .mob-nav {
+    width:50%;
+  }
+  .portfolio_item {
+    grid-template-columns: repeat(3, 1fr);
+    padding:0;
+    margin:25px;
+  }
+  .grid-wrapper {
+    padding: 15px;;
+    margin:0; 
+  }
+  }
+
+
+@media only screen and (max-width: 768px) {
+
+  body::before {
+    background-position: center bottom;
+  }
+
+  h2 {
+    font-size:24px;
+  }
+  .content {
+    display: block;
+    grid-template-columns: 1fr;
+  }
+  .hamburger {
+    left:85%;
+  }
+
+}
+@media only screen and (max-width: 1200px) {
+  .radial-menu {
+    top:15%;
+  }
 }
