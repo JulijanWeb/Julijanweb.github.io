@@ -108,6 +108,14 @@ li > a:hover::before {
   height: 100%;
 }
 
+.form-grid {
+
+  padding:80px;
+  grid-gap: 50px;
+
+  
+}
+
 
 .content {
   background-color:black;
@@ -141,6 +149,7 @@ li > a:hover::before {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
   justify-content: center;
   align-content: center;
 }
@@ -157,6 +166,11 @@ li > a:hover::before {
   left:50%;
   top:90%;
   animation:animiraj 2s infinite;
+}
+
+.content-form {
+  background-color:black;
+  
 }
 
 @keyframes animiraj {
@@ -230,6 +244,12 @@ li > a:hover::before {
 p {
   padding: 30px;
   color: white;
+}
+
+.zone2 {
+  border:2px solid #131C29;
+  border-radius:5px;
+
 }
 
 #particles-js {
@@ -409,8 +429,9 @@ footer {
   display:flex;
   justify-content:center;
   align-items:center;
-  background-color:black;
+  background-color:#131C29;
   padding:15px;
+  margin:0;
 
 }
 
@@ -428,6 +449,54 @@ span > a:hover {
   color:orange;
 }
 
+form { 
+  
+  max-width:100%; 
+
+}
+
+.feedback-input {
+  color:white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid #131c29;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+}
+
+.feedback-input:focus { border:2px solid #131c29; }
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
+}
+
+[type="submit"] {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  width: 100%;
+  background:#131c29;
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+[type="submit"]:hover { background:#131c29; }
+
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .mob-nav {
     width:50%;
@@ -441,8 +510,10 @@ span > a:hover {
     padding: 15px;;
     margin:0; 
   }
+
   }
 
+  
 
 @media only screen and (max-width: 768px) {
 
@@ -459,6 +530,9 @@ span > a:hover {
   }
   .hamburger {
     left:85%;
+  }
+  .zone2 {
+    margin-bottom:50px;
   }
 
 }
