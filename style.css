@@ -311,7 +311,7 @@ p {
 .radial-menu {
   
   position: relative;
-  top:5%;
+  top:12%;
   width: var(--radial-width);
   height: var(--radial-height);
   margin: 0 auto;  
@@ -538,6 +538,6 @@ textarea {
 }
 @media only screen and (max-width: 1200px) {
   .radial-menu {
-    top:15%;
+    top:20%;
   }
 }
