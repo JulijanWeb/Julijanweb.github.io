@@ -147,12 +147,14 @@ li > a:hover::before {
 
 .content {
   width: 100%;
+  height:auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   justify-content: center;
   align-content: center;
 }
+
 
 .content > img {
   width:100%;
@@ -254,7 +256,7 @@ p {
 
 #particles-js {
   position: absolute;
-  z-index: -1;
+
   width: 100%;
   height: 100vh;
   background: radial-gradient(
@@ -271,12 +273,30 @@ p {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   background-color:#131c29;
 }
+
+
+.grid-wrapper-2 {
+  padding: 50px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  background-color:#905600;
+}
 .portfolio_item > img {
   width: 100%;
   border-radius: 2%;
+  z-index:-1;
 }
 
-.portfolio_item {
+.portfolio_visual > img {
+  width: 100%;
+  height:300px;
+  object-fit: cover;
+  border-radius: 2%;
+  z-index:-1;
+}
+
+.portfolio_item, .portfolio_visual {
   position: relative;
   margin: 10px;
   box-shadow: rgba(0, 0, 0, 0.69) 0px 26px 30px -10px,
@@ -284,7 +304,7 @@ p {
   cursor: pointer;
 }
 
-.portfolio_item::after {
+.portfolio_item::after, .portfolio_visual::after {
   content: "";
   display: block;
   width: 100%;
@@ -297,7 +317,7 @@ p {
   opacity: 0.7;
 }
 
-.portfolio_item:hover {
+.portfolio_item:hover,.portfolio_visual:hover {
   transform: scale(1.1) translateZ(0px);
   transition-duration: 300ms;
   transition-timing-function: ease-out;
@@ -308,28 +328,23 @@ p {
   opacity: 0;
 }
 
+.portfolio_visual:hover::after {
+  opacity: 0;
+}
+
 .radial-menu {
   
+  top:8%;
   position: relative;
-  top:12%;
   width: var(--radial-width);
   height: var(--radial-height);
-  margin: 0 auto;  
+  margin: auto;  
   animation: rotateWheel 20s linear infinite;
   z-index:1;
 
 }
 
-.radial-menu::before {
-  content: '';
-  position: absolute;
-  width: 80%;
-  height: 80%;
-  border-radius: 50%;
-  top: 10%;
-  left: 10%;
-  
-}
+
 
 .radial-menu div {
   position: absolute;
@@ -535,9 +550,55 @@ textarea {
     margin-bottom:50px;
   }
 
+
+
+}
+@media only screen and (max-width: 1250px) {
+  .radial-menu {
+    top:10%;
+  }
 }
 @media only screen and (max-width: 1200px) {
   .radial-menu {
+    top:15%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .radial-menu {
     top:20%;
   }
+}
+@media only screen and (max-width: 780px) {
+  .radial-menu {
+    top:24%;
+  }
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  z-index:10;
+}
+
+.lightbox-content {
+  margin:10px;
+  max-width: 100%;
+  max-height: 70%;
+  border-radius: 5px;
+}
+
+.close {
+  color: #fff;
+  font-size: 25px;
+  position: absolute;
+  bottom: 35px;
+  cursor: pointer;
 }
